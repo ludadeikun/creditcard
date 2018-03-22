@@ -8,78 +8,122 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
 </head>
 
 <body>
-    <div class="front">
-        <div class="front-header">
-            <div class="bank-logo"></div>
-            <div class="premium-logo"></div>
-        </div>
-        <div class="chip"></div>
-        <div class="card-number">
-            <p>5351 2901 0098 9897</p>
-        </div>
-        <div class="stroke">
-            <div class="item-1">5351</div>
-            <div class="item-2">
-                <div>month/year</div>
-                <div class="valid">
-                    <div>
-                        <div>valid</div>
-                        <div>thru</div>
+    <div class="wrapper">
+        <div class="card-wrapper">
+            <div class="front">
+                <div class="front-header">
+                    <div class="bank-logo">Ukrsibbank</div>
+                    <div class="premium-logo"><div class="premium">Premium</div><div class="ukrsib">Ukrsibbank</div></div>
+                </div>
+                <div class="chip"></div>
+                <div class="card-number">
+                    <p>5351 2901 0098 9897</p>
+                </div>
+                <div class="stroke">
+                    <div class="item-1">5351</div>
+                    <div class="item-2">
+                        <div>month/year</div>
+                        <div class="valid">
+                            <div>
+                                <div>valid</div>
+                                <div>thru</div>
+                            </div>
+                            <div class="date">05/20</div>
+                        </div>
                     </div>
-                    <div class="date">05/20</div>
+                    <div class="item-3">
+                        <div>platinum</div>
+                        <div class="mastercard-logo">
+                            <div class="yellow"></div>
+                            <div class="red"></div>
+                            <div class="mastercard">MasterCard</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="name">
+                    <p>Deikun Liudmyla</p>
+                    <p>2153456574 UAH</p>
                 </div>
             </div>
-            <div class="item-3">
-                <div>platinum</div>
-                <div class="mastercard"></div>
-            </div>
-        </div>
-        <div class="name">
-            <p>Deikun Liudmyla</p>
-            <p>2153456574 UAH</p>
-        </div>
-    </div>
-    <!-- end front side -->
-    <div class="back">
-        <div class="back-header">
-            <p>
-                В Україні
-                <strong>729</strong> (безкоштовно з мобільного)б за кордоном +380445900675
-            </p>
-        </div>
-        <div class="black-line"></div>
-        <div class="white-line">
-            <p>712</p>
-        </div>
-        <div class="signature">
-            <span class="example">Authorised signature/Зразок підпису</span>
-            <span class="notvalid">Not valid unless signed/Без підпису недійсна</span>
-        </div>
-        <div class="wrap-info">
-            <div class="gologram"></div>
-            <div class="info">
-                <div class="box-1">
+            <!-- end front side -->
+            <div class="back">
+                <div class="back-header">
                     <p>
-                        Ця картка є власністю АТ "Укрсиббанк", 04070,
-                        <br> Україна, м.Київ, вул.Андріївська, 2/12
-                        <br> Незаконне використання переслідується законом
+                        В Україні
+                        <strong>729</strong> (безкоштовно з мобільного)б за кордоном +380445900675
                     </p>
                 </div>
-                <div class="box-2">
-                    <p>
-                        У випадку втрати чи викрадення картки звертайтеся за телефонами 729 (безкоштовно з мобільного), 0-800-505-800 (безкоштовно
-                        в межах України) або +380-44-5900675.
-                    </p>
+                <div class="black-line"></div>
+                <div class="white-line">
+                    <p>712</p>
                 </div>
-                <div class="website">www.my.ukrsibbank.com</div>
+                <div class="signature">
+                    <span class="example">Authorised signature/Зразок підпису</span>
+                    <span class="notvalid">Not valid unless signed/Без підпису недійсна</span>
+                </div>
+                <div class="wrap-info">
+                    <div class="gologram"></div>
+                    <div class="info">
+                        <div class="box-1">
+                            <p>
+                                Ця картка є власністю АТ "Укрсиббанк", 04070,
+                                <br> Україна, м.Київ, вул.Андріївська, 2/12
+                                <br> Незаконне використання переслідується законом
+                            </p>
+                        </div>
+                        <div class="box-2">
+                            <p>
+                                У випадку втрати чи викрадення картки звертайтеся за телефонами 729 (безкоштовно з мобільного), 0-800-505-800 (безкоштовно
+                                в межах України) або +380-44-5900675.
+                            </p>
+                        </div>
+                        <div class="website">www.my.ukrsibbank.com</div>
+                    </div>
+                    <div class="paypass"></div>
+                </div>
             </div>
-            <div class="paypass"></div>
+            <!--end back side -->
         </div>
+        <!--end card-wrapper-->
+        <div class="form">
+            <form>
+                <div class="input-card-number">Your card number:
+                    <input type="text" name="card-number" value="5351290100989897">
+                </div>
+                <div class="input-name">Name:
+                    <input type="text" name="name" value="Deikun Liudmyla">
+                </div>
+                <div class="input-bank">Number of bank:
+                    <input type="text" name="bank" value="5351">
+                </div>
+                <div class="input-valid">Valid thru:
+                    <input type="month" name="date">
+                </div>
+                <div class="input-bank-id">Your bank id:
+                    <input type="text" name="bank-id" value="2153456574">
+                </div>
+                <div class="input_currency">Your currency:
+                    <select>
+                        <option>UAH</option>
+                        <option>EUR</option>
+                        <option>USD</option>
+                    </select>
+                </div>
+                <div class="input-cvv">CVV:
+                    <input type="text" name="cvv" value="712">
+                </div>
+                <div class="submit"><button class="submit-button" type="button" onclick="asdasd()">Submit</button></div>
+            </form>
+
+        </div>
+        <!--end of form-->
     </div>
-    <!--end back side -->
+    <!--end wrapper-->
 </body>
 
 </html>

@@ -1,11 +1,15 @@
 body {
     margin: 0;
 }
+.wrapper{
+    display: flex;
+}
 .front, .back {
     width: 400px;
     height: 250px;
     background-color: rgb(44, 43, 43);
     margin: 20px;
+    border-radius: 10px;
 }
 .front-header {
     display: flex;
@@ -17,19 +21,40 @@ body {
 .bank-logo {
     width: 180px;
     height: 50px; 
-    background-color: grey; 
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+
 }
 .premium-logo {
     width: 100px;
     height: 50px;
-    background-color: rgb(94, 94, 94);
+    color: whitesmoke;
+}
+.ukrsib {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 10px;
+    margin-left: 15px;
+    margin-top: -7px;
+}
+.premium {
+    font-family: 'Tangerine', cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: none;
 }
 .chip {
-    background-color: yellow;
+    background-color: rgb(247, 194, 97);
     height: 50px;
     width: 70px;
     margin-left: 30px;
     margin-top: 15px;
+    border-radius: 8px;
 }
 .card-number p{
     text-align: center;
@@ -40,12 +65,12 @@ body {
     margin: 0;
 }
 .card-number {
-    margin: 15px 0 10px 0;
+    margin: 15px 0 8px 0;
 }
 .stroke {
     display: flex;
     justify-content: space-around;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     text-align: center;
     color: whitesmoke;
@@ -76,11 +101,36 @@ body {
     text-transform: uppercase;
     word-spacing: 0.8em; 
 }
-.mastercard {
-    background-color: red;
+.mastercard-logo {
     width: 80px;
     height: 45px;
     margin: 3px auto;
+    display: flex;
+    position: relative;
+    padding: 0;
+}
+.yellow {
+    background-color: rgb(247, 194, 97);
+    opacity: 0.7;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+}
+.red {
+    background-color: red;
+    opacity: 0.7;
+    height: 40px;
+    width: 100px;
+    margin-left: -15px;
+    border-radius: 15px;
+}
+.mastercard {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+    position: absolute;
+    top: 11px;
+    left: 8px;
 }
 .name {
     position: absolute;
@@ -96,7 +146,7 @@ body {
 /* Styles for backside */
 .back {
     color: whitesmoke;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;;
     font-size: 10px;
 }
 .back-header {
@@ -155,4 +205,40 @@ body {
     height: 40px;
     width: 50px;
     margin: 30px 0;
+}
+/* Forms Styles */
+.form {
+    margin: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: whitesmoke;
+    font-size: 14px;
+    background-color: rgb(44, 43, 43);
+    width: 400px;
+    border-radius: 10px;
+}
+.form div {
+    margin: 15px;
+}
+input[value] {
+    color: rgb(167, 167, 167);
+}
+input {
+    border-radius: 2px;
+}
+
+.submit-button {
+    background-color: grey;
+    height: 30px;
+    width: 70px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 }
