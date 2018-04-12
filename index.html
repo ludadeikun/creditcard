@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -22,10 +23,10 @@
                 </div>
                 <div class="chip"></div>
                 <div class="card-number">
-                    <p>5351 2901 0098 9897</p>
+                    <p id="card-number">5351 2901 0098 9897</p>
                 </div>
                 <div class="stroke">
-                    <div class="item-1">5351</div>
+                    <div id="bank" class="item-1">5351</div>
                     <div class="item-2">
                         <div>month/year</div>
                         <div class="valid">
@@ -33,7 +34,7 @@
                                 <div>valid</div>
                                 <div>thru</div>
                             </div>
-                            <div class="date">05/20</div>
+                            <div class="date"><span id="month">05</span>/<span id="year">20</span></div>
                         </div>
                     </div>
                     <div class="item-3">
@@ -46,8 +47,8 @@
                     </div>
                 </div>
                 <div class="name">
-                    <p>Deikun Liudmyla</p>
-                    <p>2153456574 UAH</p>
+                    <p id="name">Deikun Liudmyla</p>
+                    <p><span id="bank-id">2153456574</span> <span id="currency">UAH</span></p>
                 </div>
             </div>
             <!-- end front side -->
@@ -60,7 +61,7 @@
                 </div>
                 <div class="black-line"></div>
                 <div class="white-line">
-                    <p>712</p>
+                    <p id="cvv"></p>
                 </div>
                 <div class="signature">
                     <span class="example">Authorised signature/Зразок підпису</span>
@@ -93,22 +94,47 @@
         <div class="form">
             <form>
                 <div class="input-card-number">Your card number:
-                    <input type="text" name="card-number" value="5351290100989897">
+                    <input type="text" name="card-number" value="5351 2901 0098 9897" onkeyup="changeInput('card-number')">
                 </div>
                 <div class="input-name">Name:
-                    <input type="text" name="name" value="Deikun Liudmyla">
+                    <input type="text" name="name" value="Deikun Liudmyla" onkeyup="changeInput('name')">
                 </div>
                 <div class="input-bank">Number of bank:
-                    <input type="text" name="bank" value="5351">
+                    <input type="text" name="bank" value="5351" onkeyup="changeInput('bank')">
                 </div>
                 <div class="input-valid">Valid thru:
-                    <input type="month" name="date">
+                    <select name="month" onchange="changeSelect('month')" >
+                        <option>01</option>
+                        <option>02</option>
+                        <option selected>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                    </select>
+                    <select name="year" onchange="changeSelect('year')">
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                            <option>2028</option>
+                        </select>
                 </div>
                 <div class="input-bank-id">Your bank id:
-                    <input type="text" name="bank-id" value="2153456574">
+                    <input type="text" name="bank-id" value="2153456574" onkeyup="changeInput('bank-id')">
                 </div>
                 <div class="input_currency">Your currency:
-                    <select>
+                    <select name="currency" onchange="changeSelect('currency')">
                         <option>UAH</option>
                         <option>EUR</option>
                         <option>USD</option>
@@ -124,6 +150,36 @@
         <!--end of form-->
     </div>
     <!--end wrapper-->
+    <script>
+        
+
+        function changeInput(inputName) {
+            var element=$("input[name="+inputName+"]").val();
+            $('#'+inputName).html(element);
+        };
+
+        $("input[name='cvv']").on("keyup", function(event) {
+            changeInput('cvv');
+        });
+
+        $("input[name='+item']").on("keyup")
+
+    
+        var inputNames = ["cvv", "name", "card-number", "bank", "bank-id"];
+        inputNames.forEach(function(item) {                        
+            changeInput(item);
+        });
+
+        function changeSelect(selectName) {
+            var el=$("select[name="+selectName+"]").val();
+            $('#'+selectName).html(el);
+        };
+        var selectNames = ["currency", "month", "year"];
+        selectNames.forEach(function(item) {
+            changeSelect(item);
+        });
+                 
+    </script>
 </body>
 
 </html>

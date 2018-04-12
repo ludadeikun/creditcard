@@ -88,6 +88,9 @@ body {
     font-size: 14px;
     letter-spacing: 0.25em;
     margin: 0;
+    position: relative;
+    left: 25px;
+    top: -8px;
 }
 .valid {
     display: flex;
@@ -102,7 +105,6 @@ body {
     word-spacing: 0.8em; 
 }
 .mastercard-logo {
-    width: 80px;
     height: 45px;
     margin: 3px auto;
     display: flex;
@@ -111,26 +113,34 @@ body {
 }
 .yellow {
     background-color: rgb(247, 194, 97);
-    opacity: 0.7;
-    height: 40px;
-    width: 100px;
-    border-radius: 15px;
+    right: -10px;
+        
 }
 .red {
-    background-color: red;
-    opacity: 0.7;
-    height: 40px;
-    width: 100px;
-    margin-left: -15px;
-    border-radius: 15px;
+    background-color: red;            
+    left: -10px;
 }
+
+.yellow, .red {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;    
+    opacity: 0.7;
+    position: relative;
+}
+
 .mastercard {
     text-transform: none;
     letter-spacing: 0;
     font-size: 12px;
     position: absolute;
-    top: 11px;
-    left: 8px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    line-height: 24px;
+    margin-top: -12px;
+    text-align: center;
+
 }
 .name {
     position: absolute;
